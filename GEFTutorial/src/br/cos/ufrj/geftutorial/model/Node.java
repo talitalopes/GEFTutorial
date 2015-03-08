@@ -44,6 +44,15 @@ public class Node extends Observable {
 	return h;
     }
 
+    public void setConstraints(int x, int y, int w, int h) {
+    	setX(x);
+    	setY(y);
+    	setW(w);
+    	setH(h);
+    	setChanged();
+    	notifyObservers();
+    }
+    
     public List<Link> getIncomingLinks() {
 	return incomingLinks;
     }

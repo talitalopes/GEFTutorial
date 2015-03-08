@@ -10,7 +10,6 @@ public class Link {
 
     public void setSource(Node source) {
 	this.source = source;
-	source.getOutgoingLinks().add(this);
     }
 
     public Node getTarget() {
@@ -19,7 +18,6 @@ public class Link {
 
     public void setTarget(Node target) {
 	this.target = target;
-	target.getIncomingLinks().add(this);
     }
 
 }
