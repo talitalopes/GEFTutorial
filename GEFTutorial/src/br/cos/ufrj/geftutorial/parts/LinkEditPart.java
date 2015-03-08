@@ -19,6 +19,8 @@ public class LinkEditPart extends AbstractConnectionEditPart {
 		// ConnectionEndPointEditPolicy
 		installEditPolicy(EditPolicy.CONNECTION_ENDPOINTS_ROLE,
 				new ConnectionEndpointEditPolicy());
+		installEditPolicy(EditPolicy.CONNECTION_ROLE,
+				new LinkConnectionEditPolicy());
 	}
 
 	@Override

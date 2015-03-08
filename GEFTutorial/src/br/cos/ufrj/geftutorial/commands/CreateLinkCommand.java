@@ -27,5 +27,13 @@ public class CreateLinkCommand extends Command {
 		source.addOutgoingLink(link);
 		target.addIncomingLink(link);
 	}
+	
+	@Override
+    public void undo() {
+		link.setSource(null);
+		link.setTarget(null);
+		source.removeOutgoingLink(link);
+		target.removeIncomingLink(link);
+    }
 
 }

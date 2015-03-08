@@ -39,6 +39,8 @@ public class MyNodeEditPart extends AbstractGraphicalEditPart implements
 	protected void createEditPolicies() {
 		installEditPolicy(EditPolicy.GRAPHICAL_NODE_ROLE,
 				new NodeGraphicalNodeEditPolicy());
+		installEditPolicy(EditPolicy.COMPONENT_ROLE,
+				new NodeComponentEditPolicy());
 	}
 
 	@Override
