@@ -18,4 +18,10 @@ public class Canvas extends Observable {
 		notifyObservers();
 	}
 
+	public void removeNode(Node node) {
+		nodes.remove(node);
+		setChanged();
+		notifyObservers();
+    }
+	
 }

@@ -16,6 +16,7 @@ import org.eclipse.gef.Request;
 import org.eclipse.gef.editparts.AbstractGraphicalEditPart;
 
 import br.cos.ufrj.geftutorial.model.Node;
+import br.cos.ufrj.geftutorial.policies.NodeComponentEditPolicy;
 import br.cos.ufrj.geftutorial.policies.NodeGraphicalNodeEditPolicy;
 
 public class MyNodeEditPart extends AbstractGraphicalEditPart implements
@@ -39,6 +40,8 @@ public class MyNodeEditPart extends AbstractGraphicalEditPart implements
 	protected void createEditPolicies() {
 		installEditPolicy(EditPolicy.GRAPHICAL_NODE_ROLE,
 				new NodeGraphicalNodeEditPolicy());
+		installEditPolicy(EditPolicy.COMPONENT_ROLE,
+				new NodeComponentEditPolicy());
 	}
 
 	@Override

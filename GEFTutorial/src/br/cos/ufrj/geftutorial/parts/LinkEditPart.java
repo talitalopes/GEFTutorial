@@ -6,6 +6,7 @@ import org.eclipse.gef.editparts.AbstractConnectionEditPart;
 import org.eclipse.gef.editpolicies.ConnectionEndpointEditPolicy;
 
 import br.cos.ufrj.geftutorial.model.Link;
+import br.cos.ufrj.geftutorial.policies.LinkConnectionEditPolicy;
 
 public class LinkEditPart extends AbstractConnectionEditPart {
 
@@ -19,6 +20,8 @@ public class LinkEditPart extends AbstractConnectionEditPart {
 		// ConnectionEndPointEditPolicy
 		installEditPolicy(EditPolicy.CONNECTION_ENDPOINTS_ROLE,
 				new ConnectionEndpointEditPolicy());
+		installEditPolicy(EditPolicy.CONNECTION_ROLE,
+				new LinkConnectionEditPolicy());
 	}
 
 	@Override

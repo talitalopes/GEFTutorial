@@ -72,4 +72,16 @@ public class Node extends Observable {
     	setChanged();
     	notifyObservers();
     }
+    
+    public void removeOutgoingLink(Link link) {
+    	outgoingLinks.remove(link);
+    	setChanged();
+    	notifyObservers();
+    }
+    
+    public void removeIncomingLink(Link link) {
+    	incomingLinks.remove(link);
+    	setChanged();
+    	notifyObservers();
+    }
 }
