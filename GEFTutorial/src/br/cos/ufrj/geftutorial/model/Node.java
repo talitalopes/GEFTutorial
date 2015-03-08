@@ -2,8 +2,9 @@ package br.cos.ufrj.geftutorial.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observable;
 
-public class Node {
+public class Node extends Observable {
     private int x;
     private int y;
     private int w;
@@ -49,5 +50,17 @@ public class Node {
 
     public List<Link> getOutgoingLinks() {
 	return outgoingLinks;
+    }
+    
+    public void addIncomingLink(Link link) {
+    	incomingLinks.add(link);
+    	setChanged();
+    	notifyObservers();
+    }
+
+    public void addOutgoingLink(Link link) {
+    	outgoingLinks.add(link);
+    	setChanged();
+    	notifyObservers();
     }
 }
